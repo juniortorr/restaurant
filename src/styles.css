@@ -1,11 +1,13 @@
 :root {
     --button: #C4804A;
     --espresso: #6B5F54;
+    --overlay: rgba(238,238,238,0.5);
     --headingFontSize: 56px;
     --paragraphFontSize: 22px;
     --tabFontSize: 18px;
     --lrgBtnFontSize: 24px
     --scheduleFontSize: 24px;
+
 }
 @font-face {
     font-family: 'HeadingFont';
@@ -19,3 +21,22 @@ h1{
     font-size: var(--headingFontSize)
 }
 
+.header {
+width: 80%;
+height: 80%;
+background-color: black;
+background-image: url('./imgs/coffeeShopHeader.jpg');
+/* background: url('./imgs/coffeeShopHeader.jpg') no-repeat cover; */
+}
+.pic{
+    width: 100px;
+    height: auto;
+    outline: 1px solid black;
+}
+
+.overlay {
+    width: 425px;
+    height: 425px;
+    background-color: black;
+
+}
