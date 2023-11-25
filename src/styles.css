@@ -1,3 +1,21 @@
-h1{
-    color: red;
+:root {
+    --button: #C4804A;
+    --espresso: #6B5F54;
+    --headingFontSize: 56px;
+    --paragraphFontSize: 22px;
+    --tabFontSize: 18px;
+    --lrgBtnFontSize: 24px
+    --scheduleFontSize: 24px;
 }
+@font-face {
+    font-family: 'HeadingFont';
+    src: url('./fonts/static/Oswald-Medium.ttf');
+
+}
+
+h1{
+    color: var(--button);
+    font-family: HeadingFont;
+    font-size: var(--headingFontSize)
+}
+
