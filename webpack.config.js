@@ -23,6 +23,10 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|tff|otf)$/i,
         type: 'asset/resource'
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader'
       }
     ]
   },
@@ -33,6 +37,7 @@ module.exports = {
 ],
   output: {
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
     filename: 'main.js'
   }
 };

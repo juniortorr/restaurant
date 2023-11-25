@@ -30,7 +30,7 @@ background-image: url('./imgs/coffeeShopHeader.jpg');
 }
 .pic{
     width: 100px;
-    height: auto;
+    height: 100px;
     outline: 1px solid black;
 }
 
