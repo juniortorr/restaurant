@@ -5,38 +5,124 @@
     --headingFontSize: 56px;
     --paragraphFontSize: 22px;
     --tabFontSize: 18px;
-    --lrgBtnFontSize: 24px
+    --lrgBtnFontSize: 22px;
+    --regBtnSize: 18px;
     --scheduleFontSize: 24px;
-
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 25px;
 }
 @font-face {
     font-family: 'HeadingFont';
     src: url('./fonts/static/Oswald-Medium.ttf');
-
+}
+@font-face {
+    font-family: 'BtnFont';
+    src: url('./fonts/static/Oswald-Regular.ttf');
 }
 
 h1{
-    color: var(--button);
+    color: black;
     font-family: HeadingFont;
     font-size: var(--headingFontSize)
 }
 
 .header {
-width: 80%;
-height: 80%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 95vh;
 background-color: black;
 background-image: url('./imgs/coffeeShopHeader.jpg');
-/* background: url('./imgs/coffeeShopHeader.jpg') no-repeat cover; */
+background-size: cover;
+box-sizing: border-box;
+gap: 50px;
 }
-.pic{
-    width: 100px;
-    height: 100px;
-    outline: 1px solid black;
+.header img {
+    height: 125px;
 }
-
 .overlay {
-    width: 425px;
-    height: 425px;
-    background-color: black;
+    width: 450px;
+    height: 450px;
+    background-color: var(--overlay);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 20px;
+}
 
+.overlay h1 {
+    margin: 0 0;
+}
+
+.headerBtn {
+    background-color: var(--button);
+    color: white;
+    font-family: BtnFont;
+    font-size: var(--lrgBtnFontSize);
+    width: 225px;
+    height: 60px;
+    border-radius: 15px;
+    text-decoration: none;
+    outline: none;
+    border: none;    
+}
+
+.tabs {
+    display: flex;
+    height: 55px;
+    align-items: center;
+    width: 450px;
+}
+.tabs p {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 0;
+    width: 33%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: BtnFont;
+    font-size: var(--regBtnSize);
+}
+
+.contact, .menu {
+    border: 3px solid var(--button);
+    border-top: none;
+}
+.contact {
+    border-bottom-left-radius: 15px;
+}
+.menu {
+    border-bottom-right-radius: 15px;
+}
+.home {
+    border-bottom: 3px solid var(--button);
+}
+
+
+.sec2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+}
+.sec2 img {
+    width: 40%;
+}
+.about {
+    background-color: var(--espresso);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

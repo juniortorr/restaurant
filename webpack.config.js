@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   mode: 'development',
@@ -17,7 +18,7 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(plug|svg|jpg|jpeg|gif)$/i,
+        test: /\.(plug|svg|jpg|jpeg|gif|png)$/i,
         type: 'asset/resource',
       },
       {
@@ -26,10 +27,29 @@ module.exports = {
       },
       {
         test: /\.html$/i,
-        loader: 'html-loader'
+        loader: "html-loader"
       }
     ]
+  }, optimization: {
+    minimizer: [
+      "...",
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminMinify,
+          options: {
+            // Lossless optimization with custom option
+            // Feel free to experiment with options for better result for you
+            plugins: [
+              ["gifsicle", { interlaced: true }],
+              ["jpegtran", { progressive: true }],
+              ["optipng", { optimizationLevel: 5 }],
+            ],
+          },
+        },
+      }),
+    ],
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'

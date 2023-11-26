@@ -20,12 +20,15 @@
   "homepage": "https://github.com/juniortorr/restaurant#readme",
   "devDependencies": {
     "@squoosh/lib": "^0.5.3",
+    "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
     "image-minimizer-webpack-plugin": "^3.8.3",
     "imagemin": "^8.0.1",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
+    "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^10.0.1",
     "sharp": "^0.32.6",
     "svgo": "^3.0.4",
@@ -35,8 +38,10 @@
   },
   "dependencies": {
     "css-loader": "^6.8.1",
+    "html": "^1.0.0",
     "html-webpack-plugin": "^5.5.3",
     "inline-source-map": "^0.6.2",
+    "loader": "^2.1.1",
     "style-loader": "^3.3.3"
   }
 }

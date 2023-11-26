@@ -1,6 +1,7 @@
 import './styles.css'
-import Header from './imgs/coffeeShopHeader.jpg'
-import {createHeader, createHeaderOverlay, homePage} from './pages/home.js'
+import { createHeader, createHomePage } from './pages/home.js'
+import { createTabs } from './components/tabs.js'
 
-homePage.createHeaderOverlay()
-homePage.createHeader()
+
+
+createHomePage()
