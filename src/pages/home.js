@@ -79,13 +79,33 @@ const createAboutSection = () => {
     // create element in css bruh
 }
 
+const hoursTable = document.createElement('table')
+const createTable = () => {
+    const hours = '6AM-6PM'
+    const week = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY']
+    hoursTable.classList.add('table')
+    week.forEach((day) => {
+        const tableRow = document.createElement('tr');
+        const dayCell = document.createElement('td')
+        const hoursCell = document.createElement('td')
+        dayCell.classList.add('days')
+        dayCell.textContent = day;
+        hoursCell.textContent = hours;
+        tableRow.append(dayCell, hoursCell)
+        hoursTable.append(tableRow)
+    })
+}
 
 const hoursSection = document.createElement('div');
 const createHoursSection = () => {
     const hoursOverlay = document.createElement('div');
+    const hoursHeading = document.createElement('h1');
+    createTable()
+    hoursHeading.textContent = 'HOURS'
+    hoursHeading.classList.add('hoursHeading')
     hoursSection.classList.add('hoursSection')
     hoursOverlay.classList.add('hoursOverlay')
-    hoursSection.append(hoursOverlay)
+    hoursSection.append(hoursOverlay, hoursHeading, hoursTable)
     body.append(hoursSection)
 }
 
@@ -95,6 +115,6 @@ const createHomePage = () => {
     createAboutSection()
     createHoursSection()
 }
-export { body, createHomePage}
+export { body, createHomePage }
 
 //  rootStyles.getPropertyValue('--blue')

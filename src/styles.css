@@ -193,7 +193,34 @@ gap: 50px;
     width: 100%;
     background-color: lightgray;
     opacity: .5;
-    z-index: 1;
+    z-index: 0;
+}
+.hoursHeading {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    text-align: center;
+}
+.table {
+    position: relative;
+    table-layout: fixed;
+    width: 30%;
+    height: 70%;
+    z-index: 5;
+    margin: 0 auto;
+    font-size: var(--paragraphFontSize);
+    font-family: sans-serif;
+    text-align: center;
+    border-collapse: collapse;
 }
 
+.table tr {
+    border-bottom: 2px solid black;
+}    
+.days {
+    border-right: 2px solid black;
+}
+.table tr:last-of-type {
+    border: none;
+}
 /* set z index of all text to be above the hours overlay */

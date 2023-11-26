@@ -4,4 +4,4 @@ import { createTabs } from './components/tabs.js'
 
 
 
-createHomePage()
+// createHomePage()
