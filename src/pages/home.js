@@ -50,7 +50,7 @@ const aboutUsBox = () => {
     const aboutUsTxt = document.createElement('div')
     const imgContainer = document.createElement('div');
     const aboutUsParaContent = 'We strive to produce coffee, pastries, and breakfast to everyone we can. Enjoy our food how you want, when you want.'
-    const aboutUsTitleContent = 'A Bite For Everyone'
+    const aboutUsTitleContent = 'A BITE FOR EVERYONE'
     const allergyImgs = [glutenFreeIcon, noMilkIcon, peanutIcon, veganIcon]
 
     // YOU WERE ABOUT TO DO A FOR EACH FOR ALLERGY IMAGES SO YOU CAN ADD IT TO THE ABOUT US CONTAINER MY GUY
@@ -59,9 +59,11 @@ const aboutUsBox = () => {
         img.src = pic
         imgContainer.append(img)
     })
+    imgContainer.classList.add('aboutImgContainer')
     aboutUsTitle.textContent = aboutUsTitleContent;
     aboutUsPara.textContent = aboutUsParaContent;
     aboutUsTxt.append(aboutUsTitle, aboutUsPara);
+    aboutUsTxt.classList.add('aboutTxt')
     aboutUsContainer.append(aboutUsTxt, imgContainer)
     aboutUsContainer.classList.add('about')
 }
