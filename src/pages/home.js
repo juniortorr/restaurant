@@ -80,11 +80,20 @@ const createAboutSection = () => {
 }
 
 
+const hoursSection = document.createElement('div');
+const createHoursSection = () => {
+    const hoursOverlay = document.createElement('div');
+    hoursSection.classList.add('hoursSection')
+    hoursOverlay.classList.add('hoursOverlay')
+    hoursSection.append(hoursOverlay)
+    body.append(hoursSection)
+}
 
 const createHomePage = () => {
     createHeader()
     createTabs()
     createAboutSection()
+    createHoursSection()
 }
 export { body, createHomePage}
 
