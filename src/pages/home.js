@@ -24,12 +24,10 @@ const createHeaderOverlay =() => {
     txt.forEach((phrase) => {
         console.log(phrase)
         const lineBreak = document.createElement('br')
-        headerTxt.append(phrase)
-        headerTxt.append(lineBreak);
+        headerTxt.append(phrase, lineBreak)
     })
-    headerOverlay.append(headerTxt)
+    headerOverlay.append(headerTxt, headerBtn)
     headerOverlay.classList.add('overlay')
-    headerOverlay.append(headerBtn)
 }
 
 const createHeader = () => {
@@ -39,8 +37,7 @@ const createHeader = () => {
     createHeaderOverlay()
     headerLogo.src = logo
     headerContainer.classList.add('header');
-    headerContainer.append(headerLogo);
-    headerContainer.append(headerOverlay)
+    headerContainer.append(headerLogo, headerOverlay);
     body.append(headerContainer)
 }
 
@@ -56,12 +53,16 @@ const aboutUsBox = () => {
     const aboutUsTitleContent = 'A Bite For Everyone'
     const allergyImgs = [glutenFreeIcon, noMilkIcon, peanutIcon, veganIcon]
 
-
+    // YOU WERE ABOUT TO DO A FOR EACH FOR ALLERGY IMAGES SO YOU CAN ADD IT TO THE ABOUT US CONTAINER MY GUY
+    allergyImgs.forEach((pic) => {
+        const img = document.createElement('img')
+        img.src = pic
+        imgContainer.append(img)
+    })
     aboutUsTitle.textContent = aboutUsTitleContent;
     aboutUsPara.textContent = aboutUsParaContent;
-    aboutUsTxt.append(aboutUsTitle);
-    aboutUsTxt.append(aboutUsPara);
-    aboutUsContainer.append(aboutUsTxt)
+    aboutUsTxt.append(aboutUsTitle, aboutUsPara);
+    aboutUsContainer.append(aboutUsTxt, imgContainer)
     aboutUsContainer.classList.add('about')
 }
 
@@ -70,8 +71,7 @@ const createAboutSection = () => {
     const sec2Container = document.createElement('div');
     const pastries = document.createElement('img');
     pastries.src = pastryDisplay;
-    sec2Container.append(pastries);
-    sec2Container.append(aboutUsContainer)
+    sec2Container.append(pastries, aboutUsContainer);
     sec2Container.classList.add('sec2') 
     body.append(sec2Container)
     // create element in css bruh
