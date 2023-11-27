@@ -25,10 +25,6 @@ module.exports = {
         test: /\.(woff|woff2|eot|tff|otf)$/i,
         type: 'asset/resource'
       },
-      {
-        test: /\.html$/i,
-        loader: "html-loader"
-      }
     ]
   }, optimization: {
     minimizer: [
@@ -37,8 +33,6 @@ module.exports = {
         minimizer: {
           implementation: ImageMinimizerPlugin.imageminMinify,
           options: {
-            // Lossless optimization with custom option
-            // Feel free to experiment with options for better result for you
             plugins: [
               ["gifsicle", { interlaced: true }],
               ["jpegtran", { progressive: true }],

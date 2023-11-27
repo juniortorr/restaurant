@@ -25,11 +25,13 @@ body {
     src: url('./fonts/static/Oswald-Regular.ttf');
 }
 
-h1{
+h1, h2{
     color: black;
     font-family: HeadingFont;
-    font-size: var(--headingFontSize)
+    font-size: var(--headingFontSize);
+    margin: 0 0;
 }
+
 
 .header {
 display: flex;
@@ -200,6 +202,7 @@ gap: 50px;
     z-index: 4;
     width: 100%;
     text-align: center;
+    margin: 30px 0
 }
 .table {
     position: relative;
@@ -223,4 +226,32 @@ gap: 50px;
 .table tr:last-of-type {
     border: none;
 }
-/* set z index of all text to be above the hours overlay */
+
+/* Contact Page CSS */      
+
+.contactHeading {
+    text-align: center;
+    margin-top: 25px;
+    text-shadow: 1px 1px 2px black;
+}
+.contactSubheading {
+    text-align: center;
+    font-family: BtnFont;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+.contactOverlay {
+    width: 80%;
+    height: 500px;
+    background: rgba(60, 44, 30, 0.33);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8.3px 0px rgba(0, 0, 0, 0.4);
+}
+.coffee {
+    background-image: url('./imgs/coffee-cup.jpg');
+    background-size: cover;
+    height: 100vh;
+    margin: 0 0;
+    padding: 0 0;
+}
