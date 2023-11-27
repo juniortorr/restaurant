@@ -10,7 +10,7 @@ import glutenFreeIcon from '/src/imgs/gluten-free.png'
 import noMilkIcon from '/src/imgs/no-milk.png'
 import peanutIcon from '/src/imgs/peanut-free.png'
 import veganIcon from '/src/imgs/vegan.png'
-import { createTabs } from '../components/tabs';
+import { createTabs, tabsContainer } from '../components/tabs';
 
 
 const createHeaderBtn = () => {
@@ -112,6 +112,7 @@ const createHoursSection = () => {
 const createHomePage = () => {
     createHeader()
     createTabs()
+    body.append(tabsContainer)
     createAboutSection()
     createHoursSection()
 }

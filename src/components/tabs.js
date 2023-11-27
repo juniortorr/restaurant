@@ -14,7 +14,6 @@ const fillTabs = () => {
 const createTabs = () => {
     fillTabs()
     tabsContainer.classList.add('tabs')
-    body.append(tabsContainer)
 }
 
-export { createTabs }
+export { createTabs, tabsContainer }

@@ -1,4 +1,4 @@
-import { createTabs } from '../components/tabs';
+import { createTabs, tabsContainer } from '../components/tabs';
 import { body } from './home.js'
 
 const createContactHeading = () => {
@@ -18,6 +18,9 @@ const createContactHeading = () => {
 const createForm = (overlay) => {
     const inputs = ['First Name', 'Last Name', 'Email']
     const form = document.createElement('form');
+    const btn = document.createElement('button');
+    btn.classList.add('formBtn')
+    btn.textContent = 'Submit'
     inputs.forEach((input) => {
         const inputElement = document.createElement('input');
         inputElement.classList.add('formInput');
@@ -25,21 +28,26 @@ const createForm = (overlay) => {
         form.append(inputElement)
     })
     const txtArea = document.createElement('textarea');
-    form.append(txtArea);
+    txtArea.placeholder = 'hello there'
+    form.append(txtArea, btn);
     overlay.append(form)
 }
 
 const createContactOverlay = () => {
     const overlay = document.createElement('div');
+    createTabs()
+    overlay.append(tabsContainer);
+    tabsContainer.classList.add('contactTabs')
     overlay.classList.add('contactOverlay')
     body.append(overlay)
-    
+    createForm(overlay)
 }
 
 const createContactPage = () => {
     body.classList.add('coffee')
     createContactHeading()
     createContactOverlay()
+    
 }
 
 export { createContactPage }
