@@ -311,13 +311,16 @@ textarea {
     align-items: center;
 }
 .menuOverlay {
-    width: 200px;
+    width: 400px;
     height: 200px;
     background-color: var(--overlay);
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .menuHeaderTxt {
     color: black;
+    letter-spacing: 1.5px;
+    font-size: var(--headingFontSize);
 }
