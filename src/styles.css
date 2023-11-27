@@ -95,6 +95,13 @@ gap: 50px;
     font-family: BtnFont;
     font-size: var(--regBtnSize);
 }
+.contactTabs {
+    position: absolute;
+    margin: auto;
+    height: 50px;
+    top: 0;
+    width: 400px;
+}
 
 .contact, .menu {
     border: 3px solid var(--button);
@@ -244,13 +251,14 @@ gap: 50px;
 .contactOverlay {
     position: relative;
     width: 80%;
-    height: 50vh;
+    height: 55vh;
     background: rgba(60, 44, 30, 0.33);
     border-radius: 10px;
     box-shadow: 0px 4px 8.3px 0px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1370px;
 }
 .coffee {
     background-image: url('./imgs/coffee-cup.jpg');
@@ -261,22 +269,17 @@ gap: 50px;
     display: flex; 
     justify-content: center;
 }
-.contactTabs {
-    position: absolute;
-    left: 34%;
-    height: 50px;
-    top: 0;
-    width: 400px;
-}
 
 form {
     display: grid;
     margin-top: 20px;
-    height: 60%;
     grid-template-rows: 60px 60px 60px;
     grid-template-columns: 350px 350px;
-    row-gap: 30px;
+    row-gap: 40px;
     column-gap: 100px;
+}
+form input {
+    font-size: var(--regBtnSize);
 }
 form input, textarea, form button {
     opacity: .8;
@@ -293,4 +296,28 @@ form button {
 textarea {
     grid-row: 1 / 3;
     grid-column: 2 / 3;
+    font-size: var(--regBtnSize);
+}
+
+/* Menu Styling */
+
+.menuHeader {
+    width: 100%;
+    height: 40vh;
+    background-image: url('./imgs/menu-header.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuOverlay {
+    width: 200px;
+    height: 200px;
+    background-color: var(--overlay);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuHeaderTxt {
+    color: black;
 }
