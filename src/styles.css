@@ -45,6 +45,7 @@ background-image: url('./imgs/coffeeShopHeader.jpg');
 background-size: cover;
 box-sizing: border-box;
 gap: 50px;
+padding-top: 20px;
 }
 .header img {
     height: 125px;
@@ -83,6 +84,7 @@ gap: 50px;
     height: 55px;
     align-items: center;
     width: 450px;
+    cursor: pointer;
 }
 .tabs p {
     display: flex; 
@@ -309,6 +311,7 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .menuOverlay {
     width: 400px;
@@ -323,4 +326,29 @@ textarea {
     color: black;
     letter-spacing: 1.5px;
     font-size: var(--headingFontSize);
+}
+
+.cardHolder {
+    margin-top: 100px;
+}
+.recipeCard {
+    display: flex; 
+    flex-direction: column;
+    height: 800px;
+    width: 800px;
+}
+
+.foodTxt h2 {
+    margin-bottom: 0;
+}
+.foodTxt p {
+    font-size: var(--paragraphFontSize);
+}
+.foodTxt p:first-of-type {
+    margin-top: 0;
+}
+.line {
+    width: 275px; 
+    border: 2px solid black;
+    margin: 10px 0;
 }
