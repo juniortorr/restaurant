@@ -1,6 +1,6 @@
 import './styles.css'
-import { createHomePage, body } from './pages/home.js'
-import { createTabs } from './components/tabs.js'
+import { createHomePage, body, headerTxt} from './pages/home.js'
+import { createTabs, tabsContainer } from './components/tabs.js'
 import { createContactPage } from './pages/contact.js'
 import { createMenuPage } from './pages/menu.js'
 
@@ -10,14 +10,41 @@ const pages = [createContactPage, createHomePage, createMenuPage]
 // createMenuPage()
 
 const createNewPage = (tabNum) => {
+  const divs = document.querySelectorAll('div')
+  const bodyStyle = getComputedStyle(body)
 
-    console.log(tabNum)
     for(let i = 0; i<pages.length; i++){
       if(i === tabNum) {
+        divs.forEach((div) =>{
+          while(div.hasChildNodes()){
+            div.removeChild(div.lastChild)
+          }
+        })
         while(body.hasChildNodes()){
-            body.removeChild(body.lastChild)
+          body.removeChild(body.lastChild)
         }
-        pages[i]()
+        headerTxt.innerHTML = ''
+        body.removeAttribute('class')
+        tabsContainer.removeAttribute('class')
+        // console.log(i, tabNum)
+        // console.log(headerOverlay)
+        // if(headerOverlay.hasChildNodes()){
+        //   console.log('yes i do')
+        //   console.log(child)
+        //   headerOverlay.removeChild(headerOverlay.lastChild)
+        // } else {
+        //   console.log('i am alone')
+        // }
+        // // while(headerOverlay.hasChildNodes()){
+        //   headerOverlay.remove(headerOverlay.lastChild)
+        // }
+        // while(body.hasChildNodes()){
+        //     body.removeChild(body.lastChild)
+        // }
+        console.log('hello')
+        setTimeout(() => {
+          pages[i]()
+        }, 2000)
       }
     }
 }

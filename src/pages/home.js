@@ -3,6 +3,8 @@ const cssRoot = document.querySelector(':root');
 const rootStyles = getComputedStyle(cssRoot);
 const headerOverlay = document.createElement('div')
 const headerBtn = document.createElement('button');
+const headerTxt = document.createElement('h1');
+
 
 import logo from '/src/imgs/coffee-shop-logo.png' 
 import pastryDisplay from '/src/imgs/pastry-display.jpg'    
@@ -12,17 +14,14 @@ import peanutIcon from '/src/imgs/peanut-free.png'
 import veganIcon from '/src/imgs/vegan.png'
 import { createTabs, tabsContainer } from '../components/tabs';
 
-
 const createHeaderBtn = () => {
     headerBtn.textContent = 'ORDER';
     headerBtn.classList.add('headerBtn')
 }
 
 const createHeaderOverlay =() => {
-    const headerTxt = document.createElement('h1');
     const txt = ['HOMEMADE', 'WITH LOVE', 'FOR YOU']
     txt.forEach((phrase) => {
-        console.log(phrase)
         const lineBreak = document.createElement('br')
         headerTxt.append(phrase, lineBreak)
     })
@@ -109,6 +108,7 @@ const createHoursSection = () => {
     body.append(hoursSection)
 }
 
+
 const createHomePage = () => {
     createHeader()
     createTabs()
@@ -116,6 +116,7 @@ const createHomePage = () => {
     createAboutSection()
     createHoursSection()
 }
-export { body, createHomePage }
+
+export { body, createHomePage, headerTxt }
 
 //  rootStyles.getPropertyValue('--blue')

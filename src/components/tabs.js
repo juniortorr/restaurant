@@ -21,7 +21,6 @@ const fillTabs = () => {
     //     tab.addEventListener('click', createNewPage([i]))
     // }
     for(let i = 0; i<options.length; i++) {
-        console.log(options[i])
         const tab = document.createElement('p')
         tab.textContent = options[i];
         tab.classList.add(`${options[i].toLowerCase()}`)

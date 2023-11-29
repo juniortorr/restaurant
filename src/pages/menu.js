@@ -63,8 +63,6 @@ const sandwich = new Recipe('SMOKED SALMON FOCCACIA', 'egg whites, tomato, red o
 const frenchToast = new Recipe('PUMPKIN FRENCH TOAST', 'brown sugar, pumpkin spice, cinnamon', '8', frenchToastPic) 
 const donut = new Recipe(`DAN'S DONUT`, `Dan's personal favorite, vanilla cream filled dounut`, '3', donutPic) 
 
-
-console.log(recipes)
 const createMenuPage = () => {
     createMenuHeader()
     createTabs()    
